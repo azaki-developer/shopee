@@ -8,6 +8,7 @@ double edge = 12.0;
 Color colorBlack = Color(0xff000000);
 Color colorDarkGrey = Color(0xff272C2F);
 Color colorLightGrey = Color(0xff757575);
+Color colorLightGrey_2 = Color(0xffCFCFCF);
 Color colorWhite = Color(0xffFFFFFF);
 Color colorOrange = Color(0xffED4D2D);
 Color colorBackground = Color(0xffEEEEEE);
