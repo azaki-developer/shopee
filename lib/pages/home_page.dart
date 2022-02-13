@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorOrange,
+      backgroundColor: colorBackground,
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -720,20 +720,111 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 6,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
+                      SizedBox(
+                        width: 6,
+                      ),
                       Discovery(
                         imageUrl: 'assets/15_discovery_1.png',
                         label: 'All',
                         selection: true,
                       ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_2.png',
+                        label: 'Shopee Food',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_3.png',
+                        label: 'Free Delivery',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_4.png',
+                        label: 'Xtra Cashback',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_5.png',
+                        label: 'COD',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_6.png',
+                        label: 'Health',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_7.png',
+                        label: "Women's Fashion",
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_8.png',
+                        label: 'Shoes',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_9.png',
+                        label: 'Beauty',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_10.png',
+                        label: 'Bags',
+                        selection: false,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  'Loading...',
+                  style: orangeRegular14,
+                ),
+                SizedBox(
+                  height: 140,
+                ),
               ],
             ),
             Column(
