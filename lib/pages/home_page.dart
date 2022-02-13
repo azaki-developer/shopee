@@ -4,6 +4,9 @@ import 'package:shopee/widgets/2_menu.dart';
 import 'package:shopee/widgets/buttom_navigation.dart';
 import 'package:shopee/widgets/1_main_ad.dart';
 
+import '../widgets/3_flashSale.dart';
+import '../widgets/4_shopeeFood.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -220,7 +223,6 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 280,
                   decoration: BoxDecoration(
                     color: colorWhite,
                   ),
@@ -273,7 +275,7 @@ class HomePage extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                '07',
+                                '29',
                                 style: whiteMedium14,
                               ),
                             ),
@@ -296,7 +298,7 @@ class HomePage extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                '07',
+                                '59',
                                 style: whiteMedium14,
                               ),
                             ),
@@ -322,10 +324,256 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: 12,
                       ),
-                      Row(),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 12,
+                            ),
+                            FlashSale(
+                              imageUrl: 'assets/7_item_1.png',
+                              price: '58.500',
+                              discount: 64,
+                              partner: true,
+                              freeDelivery: true,
+                              xtraCashback: true,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            FlashSale(
+                              imageUrl: 'assets/7_item_2.png',
+                              price: '8.900',
+                              discount: 63,
+                              partner: false,
+                              freeDelivery: true,
+                              xtraCashback: false,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            FlashSale(
+                              imageUrl: 'assets/7_item_3.png',
+                              price: '1.000',
+                              discount: 55,
+                              partner: true,
+                              freeDelivery: true,
+                              xtraCashback: true,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            FlashSale(
+                              imageUrl: 'assets/7_item_4.png',
+                              price: '7.500',
+                              discount: 64,
+                              partner: true,
+                              freeDelivery: true,
+                              xtraCashback: true,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            FlashSale(
+                              imageUrl: 'assets/7_item_5.png',
+                              price: '8.399',
+                              discount: 50,
+                              partner: false,
+                              freeDelivery: false,
+                              xtraCashback: true,
+                            ),
+                            SizedBox(
+                              width: 24,
+                            ),
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/0_icon_seeAll.png',
+                                  width: 40,
+                                  height: 40,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'See All',
+                                  style: orangeRegular12,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 24,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: colorWhite,
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Text(
+                            'SHOPEEFOOD',
+                            style: orangeBold16,
+                          ),
+                          Spacer(),
+                          Text(
+                            'See All Deals',
+                            style: lightGreyRegular12,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Image.asset(
+                            'assets/0_icon_nextRight.png',
+                            width: 20,
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          8,
+                        ),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width - (2 * 12),
+                          height: 80,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                Image.asset('assets/9_shopeeFoodAd_1.png'),
+                                Image.asset('assets/9_shopeeFoodAd_2.png'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 12,
+                            ),
+                            ShopeeFood(
+                              imageUrl: 'assets/10_food_1.png',
+                              discount: 60,
+                              label: 'Beef Rendang',
+                              origin: 'Padang',
+                              star: 4.7,
+                              minutes: 32,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            ShopeeFood(
+                              imageUrl: 'assets/10_food_2.png',
+                              discount: 50,
+                              label: 'Nasi Goreng',
+                              origin: 'Aceh',
+                              star: 4.6,
+                              minutes: 33,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            ShopeeFood(
+                              imageUrl: 'assets/10_food_3.png',
+                              discount: 30,
+                              label: 'Gado-Gado',
+                              origin: 'Jakarta',
+                              star: 4.8,
+                              minutes: 34,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            ShopeeFood(
+                              imageUrl: 'assets/10_food_4.png',
+                              discount: 40,
+                              label: 'Chicken Satay',
+                              origin: 'Madura',
+                              star: 4.6,
+                              minutes: 35,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            ShopeeFood(
+                              imageUrl: 'assets/10_food_5.png',
+                              discount: 60,
+                              label: 'Mie Goreng',
+                              origin: 'Medan',
+                              star: 4.5,
+                              minutes: 36,
+                            ),
+                            SizedBox(
+                              width: 24,
+                            ),
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/0_icon_seeAll.png',
+                                  width: 40,
+                                  height: 40,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'See All',
+                                  style: orangeRegular12,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 24,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 120,
+                ),
+                Container(),
               ],
             ),
             Column(
