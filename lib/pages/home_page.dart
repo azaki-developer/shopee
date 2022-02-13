@@ -6,6 +6,8 @@ import 'package:shopee/widgets/1_main_ad.dart';
 
 import '../widgets/3_flashSale.dart';
 import '../widgets/4_shopeeFood.dart';
+import '../widgets/5_topProduct.dart';
+import '../widgets/6_discovery.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -221,6 +223,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 12,
                 ),
+                // Flash Sale
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -418,6 +421,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 12,
                 ),
+                // ShopeeFood
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -439,7 +443,7 @@ class HomePage extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            'See All Deals',
+                            'See More',
                             style: lightGreyRegular12,
                           ),
                           SizedBox(
@@ -571,9 +575,165 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 120,
+                  height: 12,
                 ),
-                Container(),
+                // Top Products
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  color: colorWhite,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Text(
+                            'TOP PRODUCTS',
+                            style: orangeBold16,
+                          ),
+                          Spacer(),
+                          Text(
+                            'See More',
+                            style: lightGreyRegular12,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Image.asset(
+                            'assets/0_icon_nextRight.png',
+                            width: 20,
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 12,
+                            ),
+                            TopProduct(
+                              imageUrl: 'assets/13_topItem_1.png',
+                              label: 'Men’s Flannel Shirts Long Sleeve',
+                              sold: 22,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            TopProduct(
+                              imageUrl: 'assets/13_topItem_2.png',
+                              label: 'Sweater',
+                              sold: 11,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            TopProduct(
+                              imageUrl: 'assets/13_topItem_3.png',
+                              label: 'Crewneck Sweatshirt',
+                              sold: 24,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            TopProduct(
+                              imageUrl: 'assets/13_topItem_4.png',
+                              label: 'KN95 Face Mask',
+                              sold: 180,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            TopProduct(
+                              imageUrl: 'assets/13_topItem_5.png',
+                              label: 'Earloop Face Mask',
+                              sold: 466,
+                            ),
+                            SizedBox(
+                              width: 24,
+                            ),
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/0_icon_seeAll.png',
+                                  width: 40,
+                                  height: 40,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'See All',
+                                  style: orangeRegular12,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 24,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 48,
+                  color: colorWhite,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Text(
+                        'DAILY DISCOVERY',
+                        style:orangeBold16,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Image.asset(
+                        'assets/0_icon_nextDown.png',
+                        width: 20,
+                        height: 20,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Discovery(
+                        imageUrl: 'assets/15_discovery_1.png',
+                        label: 'All',
+                        selection: true,
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
             Column(
