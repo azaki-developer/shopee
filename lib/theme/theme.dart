@@ -19,6 +19,11 @@ TextStyle blackRegular12 = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   fontSize: 12,
 );
+TextStyle blackMedium14 = GoogleFonts.poppins(
+  color: colorBlack,
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
 
 // Dark Grey Text Style
 TextStyle darkGreyRegular10 = GoogleFonts.poppins(

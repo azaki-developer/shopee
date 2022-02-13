@@ -3,10 +3,8 @@ import 'package:shopee/theme/theme.dart';
 import 'package:shopee/widgets/2_menu.dart';
 import 'package:shopee/widgets/buttom_navigation.dart';
 import 'package:shopee/widgets/1_main_ad.dart';
-import 'package:vs_scrollbar/vs_scrollbar.dart';
 
 class HomePage extends StatelessWidget {
-  ScrollController _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,21 +14,23 @@ class HomePage extends StatelessWidget {
           children: [
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  MainAd(
-                    imageUrl: 'assets/2_mainAd_1.png',
-                  ),
-                  MainAd(
-                    imageUrl: 'assets/2_mainAd_2.png',
-                  ),
-                  MainAd(
-                    imageUrl: 'assets/2_mainAd_3.png',
-                  ),
-                  MainAd(
-                    imageUrl: 'assets/2_mainAd_4.png',
-                  ),
-                ],
+              child: Center(
+                child: Row(
+                  children: [
+                    MainAd(
+                      imageUrl: 'assets/2_mainAd_1.png',
+                    ),
+                    MainAd(
+                      imageUrl: 'assets/2_mainAd_2.png',
+                    ),
+                    MainAd(
+                      imageUrl: 'assets/2_mainAd_3.png',
+                    ),
+                    MainAd(
+                      imageUrl: 'assets/2_mainAd_4.png',
+                    ),
+                  ],
+                ),
               ),
             ),
             Column(
@@ -40,18 +40,22 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 392,
+                  height: 310,
                   decoration: BoxDecoration(
                     color: colorWhite,
                   ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: 68,
-                          bottom: 20,
+                  child: Scrollbar(
+                    thickness: 4,
+                    scrollbarOrientation: ScrollbarOrientation.bottom,
+                    radius: Radius.circular(
+                      8,
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 68,
                         ),
-                        child: SingleChildScrollView(
+                        SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
@@ -136,8 +140,189 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        // Secondary Ads
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: 510,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 112,
+                  decoration: BoxDecoration(
+                    color: colorWhite,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 12,
+                          ),
+                          ClipRRect(
+                            child: Image.asset(
+                              'assets/5_secondaryAd_1.png',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                8,
+                              ),
+                            ),
+                          ),
+                          Spacer(),
+                          ClipRRect(
+                            child: Image.asset(
+                              'assets/5_secondaryAd_2.png',
+                              width: 191,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                8,
+                              ),
+                            ),
+                          ),
+                          Spacer(),
+                          ClipRRect(
+                            child: Image.asset(
+                              'assets/5_secondaryAd_3.png',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                8,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                        ],
                       ),
-                      // Secondary Ads
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 280,
+                  decoration: BoxDecoration(
+                    color: colorWhite,
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Image.asset(
+                            'assets/6_flashSale.png',
+                            width: 95,
+                            height: 19,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Container(
+                            width: 24,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              color: colorBlack,
+                            ),
+                            child: Center(
+                              child: Text(
+                                '07',
+                                style: whiteMedium14,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text(
+                            ':',
+                            style: blackMedium14,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Container(
+                            width: 24,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              color: colorBlack,
+                            ),
+                            child: Center(
+                              child: Text(
+                                '07',
+                                style: whiteMedium14,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text(
+                            ':',
+                            style: blackMedium14,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Container(
+                            width: 24,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              color: colorBlack,
+                            ),
+                            child: Center(
+                              child: Text(
+                                '07',
+                                style: whiteMedium14,
+                              ),
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'See All Deals',
+                            style: lightGreyRegular12,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Image.asset(
+                            'assets/0_icon_nextRight.png',
+                            width: 20,
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(),
                     ],
                   ),
                 ),

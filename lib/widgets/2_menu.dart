@@ -19,8 +19,8 @@ class Menu extends StatelessWidget {
         children: [
           // Container 1
           Container(
-            width: 82,
-            height: 82,
+            width: 80,
+            height: 84,
             child: Column(
               children: [
                 Container(
@@ -58,8 +58,8 @@ class Menu extends StatelessWidget {
           ),
           // Container 2
           Container(
-            width: 82,
-            height: 82,
+            width: 80,
+            height: 84,
             child: Column(
               children: [
                 Container(
