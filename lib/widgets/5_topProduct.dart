@@ -52,7 +52,7 @@ class TopProduct extends StatelessWidget {
                       ),
                       Spacer(),
                       Text(
-                        '${sold}k+ sold',
+                        '${sold}k+ Sold',
                         style: lightGreyRegular10,
                       ),
                     ],

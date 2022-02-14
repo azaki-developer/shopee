@@ -8,6 +8,7 @@ import '../widgets/3_flashSale.dart';
 import '../widgets/4_shopeeFood.dart';
 import '../widgets/5_topProduct.dart';
 import '../widgets/6_discovery.dart';
+import '../widgets/7_item.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -706,7 +707,7 @@ class HomePage extends StatelessWidget {
                       ),
                       Text(
                         'DAILY DISCOVERY',
-                        style:orangeBold16,
+                        style: orangeBold16,
                       ),
                       SizedBox(
                         width: 6,
@@ -814,6 +815,94 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 6,
+                ),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Item(
+                          imageUrl: 'assets/16_item_1.png',
+                          label:
+                              'Green Backpack for Girls, Lightweight Backpack',
+                          price: '124.999',
+                          sold: 25,
+                          star: true,
+                          freeDelivery: true,
+                          xtraCashback: true,
+                          discount: 30,
+                        ),
+                        Item(
+                          imageUrl: 'assets/16_item_2.png',
+                          label: 'Forester Insulated Rubber Boots',
+                          price: '159.999',
+                          sold: 5,
+                          star: false,
+                          freeDelivery: true,
+                          xtraCashback: true,
+                          discount: 10,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Item(
+                          imageUrl: 'assets/16_item_3.png',
+                          label: 'Lipsy Lip Care, Lip Balm',
+                          price: '49.999',
+                          sold: 50,
+                          star: true,
+                          freeDelivery: false,
+                          xtraCashback: false,
+                          discount: 50,
+                        ),
+                        Item(
+                          imageUrl: 'assets/16_item_4.png',
+                          label: 'Women’s Elastic Waist Jersey Culottes Pants',
+                          price: '99.999',
+                          sold: 50,
+                          star: true,
+                          freeDelivery: true,
+                          xtraCashback: true,
+                          discount: 40,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Item(
+                          imageUrl: 'assets/16_item_5.png',
+                          label:
+                              'Long-Sleeve Soft Touch Waffle Stitch Crewneck Sweater',
+                          price: '149.999',
+                          sold: 10,
+                          star: false,
+                          freeDelivery: true,
+                          xtraCashback: true,
+                          discount: 20,
+                        ),
+                        Item(
+                          imageUrl: 'assets/16_item_6.png',
+                          label:
+                              'Wireless Earbuds, Bluetooth Headphones with Microphone',
+                          price: '224.999',
+                          sold: 5,
+                          star: true,
+                          freeDelivery: false,
+                          xtraCashback: false,
+                          discount: 40,
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 30,
